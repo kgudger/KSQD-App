@@ -1,0 +1,17 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "KSQD",
+  "short_name": "KSQD",
+  "version": "io.cordova.hellocordova",
+  "description": "KSQD App",
+  "author": "KSQD Cordova Team",
+  "icons": [
+    {
+      "src": "www/ksqd-logo.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    }
+  ],
+  "start_url": "index.html"
+}
