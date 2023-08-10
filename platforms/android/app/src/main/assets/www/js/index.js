@@ -43,7 +43,7 @@ function onDeviceReady() {
     document.getElementById("stream").addEventListener("click", playAudio);
     document.getElementById("psched").addEventListener("click", schedule);
     document.getElementById("donate").addEventListener("click", donate);
-
+	fetch_url();
 }
 
 var myMedia = null;
@@ -68,7 +68,7 @@ function playAudio() {
 	  myMedia.play();
 	  let strm  = document.getElementById('stream')
 	  strm.innerHTML = "WAITING FOR STREAM"; 
-	  setTimeout(stopStream, 10000);
+	  setTimeout(stopStream, 7000);
 	}
 	else {
 		stopAudio();
@@ -116,3 +116,23 @@ function donate() {
 function stopStream() {
 	  document.getElementById('stream').innerHTML = "KSQD LIVESTREAM STOP"; 
 }
+
+/**
+ * Function to change the content in the frame on the page bottom
+ * 
+ */
+function fetch_url() {
+    var oReq = new XMLHttpRequest();
+	oReq.addEventListener("load", reqListener);
+	oReq.open("GET", "https://ksqd.org/txt/");
+	oReq.send();
+}
+/**
+ * function to receive the info from the url and put it in the frame.
+ */
+function reqListener () {
+  var iframe = document.getElementById("schedule");
+  console.log(this.responseText);
+  iframe.setAttribute("src",this.responseText);
+}
+

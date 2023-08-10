@@ -132,9 +132,10 @@ h1 {
     background-image: url(../record.gif) no-repeat center top;*/
     background-color: #a7a7a7;
     border-radius: 4px 4px 4px 4px;
+    color: black;
     overflow: hidden;
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-/*	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+/*	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
     background-image:url(../record.img) ;
 	background-color:#ededed;
 	border-radius:6px;
@@ -168,6 +169,7 @@ h1 {
 	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
 	background-color:#fe1a00;
 	border-radius:6px;
+	color: black;
 /*	border:1px solid #dcdcdc; */
 	display:inline-block;
 	cursor:pointer;
@@ -189,10 +191,11 @@ h1 {
 	top:1px;
 }
 .button3 {
-/*	box-shadow:inset 0px 1px 0px 0px #ffffff; */
-	background:linear-gradient(to bottom, #00ddd2; 5%, #ce0100 100%);
+/*	box-shadow:inset 0px 1px 0px 0px #ffffff; 
+	background:linear-gradient(to bottom, #00ddd2; 5%, #ce0100 100%); */
 	background-color:#00ddd2;
 	border-radius:6px;
+	color: black;
 /*	border:1px solid #dcdcdc; */
 	display:inline-block;
 	cursor:pointer;

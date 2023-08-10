@@ -68,7 +68,7 @@ function playAudio() {
 	  myMedia.play();
 	  let strm  = document.getElementById('stream')
 	  strm.innerHTML = "WAITING FOR STREAM"; 
-	  setTimeout(stopStream, 10000);
+	  setTimeout(stopStream, 7000);
 	}
 	else {
 		stopAudio();
