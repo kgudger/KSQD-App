@@ -67,7 +67,8 @@ function playAudio() {
       }
 	  myMedia.play();
 	  let strm  = document.getElementById('stream')
-	  strm.innerHTML = "KSQD LIVESTREAM STOP"; 
+	  strm.innerHTML = "WAITING FOR STREAM"; 
+	  setTimeout(stopStream, 10000);
 	}
 	else {
 		stopAudio();
@@ -106,4 +107,12 @@ function schedule() {
 function donate() {
 	var ref = cordova.InAppBrowser.open('https://ksqd.org/donate/', '_blank', 'location=yes');
 //	window.location="https://ksqd.org/donate/"
+}
+
+/**
+ * Timeout function to change the text on the livestream button
+ * 
+ */
+function stopStream() {
+	  document.getElementById('stream').innerHTML = "KSQD LIVESTREAM STOP"; 
 }
