@@ -14,4 +14,7 @@
 	<platform name="android">
 		<preference name="AndroidWindowSplashScreenAnimatedIcon" value="www/ksqd-splash.png" />
 	</platform>
+    <allow-navigation href="https://ksqd.org/*" />
+    <allow-navigation href="https://ksqd.dm.networkforgood.com/*" />
+    <allow-navigation href="https://*.spinitron.com/*" />
 </widget>

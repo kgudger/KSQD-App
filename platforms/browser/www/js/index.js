@@ -65,10 +65,9 @@ function playAudio() {
       function onError(error) {
          console.log("playAudio Error: " + error.code);
       }
-	  myMedia.play();
 	  let strm  = document.getElementById('stream')
 	  strm.innerHTML = "WAITING FOR STREAM"; 
-	  setTimeout(stopStream, 7000);
+	  setTimeout(stopStream, 5000);
 	}
 	else {
 		stopAudio();
@@ -114,6 +113,7 @@ function donate() {
  * 
  */
 function stopStream() {
+    myMedia.play();
 	  document.getElementById('stream').innerHTML = "KSQD LIVESTREAM STOP"; 
 }
 

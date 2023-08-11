@@ -22,6 +22,9 @@
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <icon src="www/ksqd-logo.png" />
+    <allow-navigation href="https://ksqd.org/*" />
+    <allow-navigation href="https://ksqd.dm.networkforgood.com/*" />
+    <allow-navigation href="https://*.spinitron.com/*" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="AndroidWindowSplashScreenAnimatedIcon" value="www/ksqd-splash.png" />
 </widget>
