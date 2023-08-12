@@ -117,8 +117,10 @@ function donate() {
  * 
  */
 function stopStream() {
-    myMedia.play();
-	  document.getElementById('stream').innerHTML = "KSQD LIVESTREAM STOP"; 
+	if(device.platform.toLowerCase() != 'android'){
+		myMedia.play();
+	}
+	document.getElementById('stream').innerHTML = "KSQD LIVESTREAM STOP"; 
 }
 
 /**
