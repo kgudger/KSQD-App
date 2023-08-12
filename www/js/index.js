@@ -67,6 +67,10 @@ function playAudio() {
       }
 	  let strm  = document.getElementById('stream')
 	  strm.innerHTML = "WAITING FOR STREAM"; 
+	  console.log(device.platform);
+	  if(device.platform.toLowerCase() == 'android'){
+		  myMedia.play();
+	  }
 	  setTimeout(stopStream, 5000);
 	}
 	else {
@@ -113,8 +117,10 @@ function donate() {
  * 
  */
 function stopStream() {
-    myMedia.play();
-	  document.getElementById('stream').innerHTML = "KSQD LIVESTREAM STOP"; 
+	if(device.platform.toLowerCase() != 'android'){
+		myMedia.play();
+	}
+	document.getElementById('stream').innerHTML = "KSQD LIVESTREAM STOP"; 
 }
 
 /**

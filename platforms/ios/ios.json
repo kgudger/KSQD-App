@@ -23,6 +23,10 @@
             {
               "xml": "<preference name=\"KeepAVAudioSessionAlwaysActive\" value=\"NO\" />",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -39,6 +43,9 @@
     "cordova-plugin-media": {
       "KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE": "NO",
       "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.cordova.ksqd"
     }
   },
   "dependent_plugins": {},
@@ -239,11 +246,20 @@
       "clobbers": [
         "window.Media"
       ]
+    },
+    {
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
     }
   ],
   "plugin_metadata": {
     "cordova-plugin-file": "7.0.0",
     "cordova-plugin-inappbrowser": "5.0.0",
-    "cordova-plugin-media": "6.1.0"
+    "cordova-plugin-media": "6.1.0",
+    "cordova-plugin-device": "2.1.0"
   }
 }

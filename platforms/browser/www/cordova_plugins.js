@@ -216,6 +216,20 @@ module.exports = [
         "id": "cordova-plugin-inappbrowser.InAppBrowserProxy",
         "pluginId": "cordova-plugin-inappbrowser",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-device/www/device.js",
+        "id": "cordova-plugin-device.device",
+        "pluginId": "cordova-plugin-device",
+        "clobbers": [
+            "device"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-device/src/browser/DeviceProxy.js",
+        "id": "cordova-plugin-device.DeviceProxy",
+        "pluginId": "cordova-plugin-device",
+        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -223,7 +237,8 @@ module.exports.metadata =
 {
     "cordova-plugin-file": "7.0.0",
     "cordova-plugin-media": "6.1.0",
-    "cordova-plugin-inappbrowser": "5.0.0"
+    "cordova-plugin-inappbrowser": "5.0.0",
+    "cordova-plugin-device": "2.1.0"
 }
 // BOTTOM OF METADATA
 });

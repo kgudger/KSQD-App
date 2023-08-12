@@ -11,6 +11,9 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
     <name>KSQD</name>
     <description>KSQD App</description>
     <author email="keith@ksqd.org" href="https://ksqd.org">

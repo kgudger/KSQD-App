@@ -4,7 +4,18 @@
     "uninstalled": []
   },
   "config_munge": {
-    "files": {}
+    "files": {
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Device\"><param name=\"browser-package\" value=\"Device\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
   },
   "installed_plugins": {
     "cordova-plugin-file": {
@@ -14,6 +25,9 @@
       "PACKAGE_NAME": "io.cordova.hellocordova"
     },
     "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-device": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
     }
   },
@@ -235,11 +249,26 @@
       "id": "cordova-plugin-inappbrowser.InAppBrowserProxy",
       "pluginId": "cordova-plugin-inappbrowser",
       "runs": true
+    },
+    {
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "id": "cordova-plugin-device.device",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-device/src/browser/DeviceProxy.js",
+      "id": "cordova-plugin-device.DeviceProxy",
+      "pluginId": "cordova-plugin-device",
+      "runs": true
     }
   ],
   "plugin_metadata": {
     "cordova-plugin-file": "7.0.0",
     "cordova-plugin-media": "6.1.0",
-    "cordova-plugin-inappbrowser": "5.0.0"
+    "cordova-plugin-inappbrowser": "5.0.0",
+    "cordova-plugin-device": "2.1.0"
   }
 }

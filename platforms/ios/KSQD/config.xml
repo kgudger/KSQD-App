@@ -36,6 +36,9 @@
     <feature name="Media">
         <param name="ios-package" value="CDVSound" />
     </feature>
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
     <name>KSQD</name>
     <description>KSQD App</description>
     <author email="keith@ksqd.org" href="https://ksqd.org">

@@ -196,11 +196,20 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "window.Media"
       ]
+    },
+    {
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
     }
   ];
   module.exports.metadata = {
     "cordova-plugin-file": "7.0.0",
     "cordova-plugin-inappbrowser": "5.0.0",
-    "cordova-plugin-media": "6.1.0"
+    "cordova-plugin-media": "6.1.0",
+    "cordova-plugin-device": "2.1.0"
   };
 });

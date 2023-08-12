@@ -24,6 +24,7 @@
 		D0A7E1858DF04F479D66EB21 /* CDVWKInAppBrowserUIDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBFFFFA9EDC4ED2BDA340DD /* CDVWKInAppBrowserUIDelegate.m */; };
 		F1380CC2387A46E6B47A74F5 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCDAEE4DDA047AB9698B1E5 /* CDVLocalFilesystem.m */; };
 		F1985F0F7BB34BB1BF2B7063 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C737AF4EB741A0B384C4A1 /* CDVFile.m */; };
+		B1128C8DD1714DA9B5058CA9 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EB2F4A18F546189EF052B0 /* CDVDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,8 @@
 		F44944146FB747CCB0E783B4 /* CDVInAppBrowserOptions.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVInAppBrowserOptions.h; path = "cordova-plugin-inappbrowser/CDVInAppBrowserOptions.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = KSQD/config.xml; sourceTree = "<group>"; };
 		FDBFFFFA9EDC4ED2BDA340DD /* CDVWKInAppBrowserUIDelegate.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVWKInAppBrowserUIDelegate.m; path = "cordova-plugin-inappbrowser/CDVWKInAppBrowserUIDelegate.m"; sourceTree = "<group>"; };
+		76EB2F4A18F546189EF052B0 /* CDVDevice.m */ = {isa = PBXFileReference; name = "CDVDevice.m"; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		9D3C24C75852468E82F1BEC2 /* CDVDevice.h */ = {isa = PBXFileReference; name = "CDVDevice.h"; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,8 @@
 				60C033E160F04FB9B1D2D46B /* CDVWKInAppBrowserUIDelegate.h */,
 				0AE04C2AE02541008DAB4A23 /* CDVSound.m */,
 				0FFB80B42C7B4262B843DA12 /* CDVSound.h */,
+				76EB2F4A18F546189EF052B0 /* CDVDevice.m */,
+				9D3C24C75852468E82F1BEC2 /* CDVDevice.h */,
 			);
 			name = Plugins;
 			path = KSQD/Plugins;
@@ -331,6 +336,7 @@
 				81EA08C64E2E4E01AED9CE3B /* CDVWKInAppBrowser.m in Sources */,
 				D0A7E1858DF04F479D66EB21 /* CDVWKInAppBrowserUIDelegate.m in Sources */,
 				A84013ED61784081B2A6C257 /* CDVSound.m in Sources */,
+				B1128C8DD1714DA9B5058CA9 /* CDVDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +374,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = io.cordova.ksqd;
+				PRODUCT_BUNDLE_IDENTIFIER = io.cordova.hellocordova;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -398,7 +404,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = io.cordova.ksqd;
+				PRODUCT_BUNDLE_IDENTIFIER = io.cordova.hellocordova;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

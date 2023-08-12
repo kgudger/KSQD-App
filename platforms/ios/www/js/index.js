@@ -67,6 +67,10 @@ function playAudio() {
       }
 	  let strm  = document.getElementById('stream')
 	  strm.innerHTML = "WAITING FOR STREAM"; 
+	  console.log(device.platform);
+	  if(device.platform.toLowerCase() == 'android'){
+		  myMedia.play();
+	  }
 	  setTimeout(stopStream, 5000);
 	}
 	else {
