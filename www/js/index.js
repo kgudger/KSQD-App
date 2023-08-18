@@ -108,8 +108,8 @@ function schedule() {
  *
  */
 function donate() {
-	var ref = cordova.InAppBrowser.open('https://ksqd.org/donate/', '_blank', 'location=yes');
-//	window.location="https://ksqd.org/donate/"
+		cordova.InAppBrowser.open('https://ksqd.org/donate/', "_system", "location=yes");
+//		var ref = cordova.InAppBrowser.open('https://ksqd.org/donate/', '_blank', 'location=yes');
 }
 
 /**
