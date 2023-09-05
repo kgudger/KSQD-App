@@ -17,7 +17,7 @@
        under the License.
  */
 
-package io.cordova.hellocordova;
+package io.cordova.ksqd;
 
 import android.os.Bundle;
 

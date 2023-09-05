@@ -30,6 +30,11 @@
 // Wait for the deviceready event before using any of Cordova's device APIs.
 // See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
 document.addEventListener('deviceready', onDeviceReady, false);
+var monitor = null; // looking for click in iframe.
+const rarray = new Uint32Array(1);
+self.crypto.getRandomValues(rarray);
+var randomnum = rarray[0];   // random number
+console.log(randomnum);
 
 /**
  * Things to do when the device is ready.
@@ -39,15 +44,16 @@ function onDeviceReady() {
     // Cordova is now initialized. Have fun!
 
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
-//    document.getElementById('deviceready').classList.add('ready');
     document.getElementById("stream").addEventListener("click", playAudio);
     document.getElementById("psched").addEventListener("click", schedule);
     document.getElementById("donate").addEventListener("click", donate);
     document.getElementById("banner").addEventListener("click", banner);
 	fetch_url();
+	monitor = setInterval(intervals, 100);
 }
 
-var myMedia = null;
+var myMedia = null; // media to play
+var frameURL = "";  // url in iframe, can be sent to server
 
 /**
  * Onclick from "Play Livestream".
@@ -149,7 +155,55 @@ function fetch_url() {
  */
 function reqListener () {
   var iframe = document.getElementById("schedule");
-  console.log(this.responseText);
-  iframe.setAttribute("src",this.responseText);
+  frameURL = this.responseText;
+  iframe.setAttribute("src",frameURL);
 }
 
+/**
+ * function to create an interval to check for a click in the iframe.
+ */
+function intervals() {
+		var elem = document.activeElement;
+		if(elem && elem.tagName == 'IFRAME'){
+			clearInterval(monitor);
+			console.log(frameURL);
+			serversend(frameURL); // sends data to server
+			monitor = setInterval(exitIframe.bind(null, elem), 100);
+		}
+}
+
+/**
+ * function to reset looking for the click after leaving the iframe.
+ */
+function exitIframe(iframe) {
+	var elem = document.activeElement;
+	if((elem && elem.tagName != 'IFRAME') || (elem && elem != iframe)){
+		console.log('exited');
+		clearInterval(monitor);
+		monitor = setInterval(intervals, 100);
+	}
+}
+
+/**
+ * function to send data to server.
+ */
+function serversend(frameURL) {
+	const xhr = new XMLHttpRequest();
+	xhr.open("POST", "https://ksqd.org/analytics/server.php");
+	xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+//    xhr.setRequestHeader('Access-Control-Allow-Headers', '*');
+//    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+	const body = JSON.stringify({
+		random: randomnum,
+		url: frameURL,
+		click: true
+	});
+	xhr.onload = () => {
+		if (xhr.readyState == 4 && xhr.status == 201) {
+			console.log(JSON.parse(xhr.responseText));
+		} else {
+			console.log(`Error: ${xhr.status}`);
+		}
+	};
+	xhr.send(body);	
+}

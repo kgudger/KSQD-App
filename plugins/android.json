@@ -7,20 +7,20 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-media": {
-      "PACKAGE_NAME": "io.cordova.hellocordova"
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.cordova.ksqd"
     },
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "io.cordova.hellocordova"
+      "PACKAGE_NAME": "io.cordova.ksqd"
     },
-    "cordova-plugin-device": {
-      "PACKAGE_NAME": "io.cordova.hellocordova"
+    "cordova-plugin-media": {
+      "PACKAGE_NAME": "io.cordova.ksqd"
     }
   },
   "dependent_plugins": {
     "cordova-plugin-file": {
       "ANDROIDX_WEBKIT_VERSION": "1.4.0",
-      "PACKAGE_NAME": "io.cordova.hellocordova"
+      "PACKAGE_NAME": "io.cordova.ksqd"
     }
   }
 }
