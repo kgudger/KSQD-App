@@ -43,6 +43,7 @@ function onDeviceReady() {
     document.getElementById("stream").addEventListener("click", playAudio);
     document.getElementById("psched").addEventListener("click", schedule);
     document.getElementById("donate").addEventListener("click", donate);
+    document.getElementById("banner").addEventListener("click", banner);
 	fetch_url();
 }
 
@@ -97,8 +98,9 @@ function stopAudio() {
  */
 function schedule() {
    var iframe = document.getElementById("schedule");
-   iframe.setAttribute("src","https://widgets.spinitron.com/widget/schedule?station=ksqd");
+//   iframe.setAttribute("src","https://widgets.spinitron.com/widget/schedule?station=ksqd");
 //   iframe.height = iframe.contentWindow.document.body.scrollHeight;
+		var ref = cordova.InAppBrowser.open('https://widgets.spinitron.com/widget/schedule?station=ksqd', '_blank', 'location=yes');
 
 //	var ref = cordova.InAppBrowser.open('https://widgets.spinitron.com/widget/schedule?station=ksqd','_blank', 'location=yes');
 }
@@ -108,8 +110,17 @@ function schedule() {
  *
  */
 function donate() {
-	var ref = cordova.InAppBrowser.open('https://ksqd.org/donate/', '_blank', 'location=yes');
-//	window.location="https://ksqd.org/donate/"
+		cordova.InAppBrowser.open('https://ksqd.org/donate/', "_system", "location=yes");
+//		var ref = cordova.InAppBrowser.open('https://ksqd.org/donate/', '_blank', 'location=yes');
+}
+
+/**
+ * Onclick to open the ksqd main page.
+ *
+ */
+function banner() {
+		cordova.InAppBrowser.open('https://ksqd.org/', "_system", "location=yes");
+//		var ref = cordova.InAppBrowser.open('https://ksqd.org/donate/', '_blank', 'location=yes');
 }
 
 /**
