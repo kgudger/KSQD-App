@@ -199,7 +199,8 @@ function serversend(frameURL) {
 		click: true
 	});
 	xhr.onload = () => {
-		if (xhr.readyState == 4 && xhr.status == 201) {
+		if (xhr.readyState == 4 && 
+				( (xhr.status == 201) || (xhr.status == 200) ) ) {
 			console.log(JSON.parse(xhr.responseText));
 		} else {
 			console.log(`Error: ${xhr.status}`);
